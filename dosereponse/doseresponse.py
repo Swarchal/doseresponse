@@ -21,12 +21,12 @@ class DoseResponse():
     def fit(self, dose, response):
         self.dose = dose
         self.response = response
-        params, cov = curve_fit(param_4_sigmoid, dose, response)
+        params, cov = curve_fit(_param_4_sigmoid, dose, response)
         self.hill_slope = params[0]
         self.ec50 = params[-1]
         return params
 
-def param_4_sigmoid(x, b, c, d, e):
+def _param_4_sigmoid(x, b, c, d, e):
     """
     4 parameter sigmoidal curve
     Parameters

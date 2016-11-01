@@ -1,6 +1,6 @@
 # doseresponse
 
-A minimal dose reponse class for calculating EC50 values and hill-slopes.
+A minimal dose response class for calculating EC50 values and hill-slopes.
 
 ```python
 from doseresponse import DoseResponse

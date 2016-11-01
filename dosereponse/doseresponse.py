@@ -36,4 +36,4 @@ def param_4_sigmoid(x, b, c, d, e):
     d : max response
     e : EC50
     """
-return (c+(d-c) / (1 + np.exp(b*(np.log(x)-np.log(e)))))
+    return (c+(d-c) / (1 + np.exp(b*(np.log(x)-np.log(e)))))

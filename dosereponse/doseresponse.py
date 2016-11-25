@@ -16,7 +16,8 @@ class DoseResponse():
         self.ec50 = None
 
 
-    def _param_4_sigmoid(self, x, b, c, d, e):
+    @staticmethod
+    def _param_4_sigmoid(x, b, c, d, e):
         """
         4 parameter sigmoidal curve
 
@@ -71,7 +72,8 @@ class DoseResponse():
         # check we have the parameters to create a function
         params = [self.hill_slope, self.min, self.max, self.ec50]
         if any(param == None for param in params):
-            raise NotImplementedError("No parameters found, have you called fit()?")
+            err_msg = "No parameters found, have you called fit()"
+            raise NotImplementedError(err_msg)
         # need to use the dose data for xdata, to predict response
         # need to watch out for replicates, so create a set from concentration
         set_dose = set(self.dose)

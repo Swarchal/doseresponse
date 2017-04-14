@@ -22,7 +22,7 @@ array([   1.05328595,    2.59972129,  101.31058779,    0.40938031])
 Which can be accessed through the object
 
 ```python
-df.hill_slope
+dr.hill_slope
 
 >>> 1.05328595
 ```
